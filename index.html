@@ -3,143 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Birthday Countdown</title>
+    <title>Richard Kofi Kyei Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            text-align: center;
-            background: linear-gradient(135deg, #2c3e50, #bdc3c7);
-            color: white;
             font-family: Arial, sans-serif;
         }
-        #profile-pic, header, footer {
-            display: none;
+        .hero {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
         }
-        #profile-pic {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            margin: 20px auto;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+        .services {
+            padding: 50px 20px;
+            text-align: center;
         }
-        .fade-in {
-            animation: fadeIn 2s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        #birthday-message {
-            display: none;
-            font-size: 2rem;
-            font-weight: bold;
-            margin-top: 20px;
-            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        .list-group-item {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-        header, footer {
-            background: rgba(0, 0, 0, 0.6);
+        .service-card {
+            border: 2px solid #ddd;
             padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .service-card:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Richard Kyei</h1>
-    </header>
-
-    <div class="container mt-5">
-        <h1 class="display-4">Countdown to My Birthday</h1>
-        <h2 id="countdown" class="display-2 mt-3">10</h2>
-        <h2 id="birthday-message">🎉 Happy Birthday! 🎉</h2>
-        <img id="profile-pic" src="images/richard-image.JPEG" alt="My Picture">
-        
-        <div id="bio" class="mt-5" style="display: none;">
-            <h2><a href="https://www.linkedin.com/in/richard-kyei-a14552172/" class="link-primary" target="_blank">About Me</a></h2>
-            <p class="lead">I am a passionate developer with expertise in web development, programming, and software engineering.</p>
-            <h3>Accomplishments</h3>
-            <ul class="list-group">
-                <li class="list-group-item">Developed multiple web applications</li>
-                <li class="list-group-item">Proficient in JavaScript, Python, and more</li>
-                <li class="list-group-item">Worked on AI and cybersecurity projects</li>
-            </ul>
-            <h3 class="mt-4">My Projects</h3>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Description of an awesome project.</p>
-                            <p><b>Note:</b>Portfolio Website, is still under construction</p>
-                        </div>
-                    </div>
+    <div class="container-fluid hero">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <h1>Let's Reveal Something New!</h1>
+                <p>Unlock the power of innovative ideas with our expert solutions.</p>
+                <button class="btn btn-primary">Schedule a free session</button>
+            </div>
+            <div class="col-md-4">
+                <img src="images/richard-image.jpeg" class="img-fluid rounded-circle" alt="Hero Image">
+            </div>
+        </div>
+    </div>
+    
+    <div class="container services">
+        <h2>Provided Services</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="service-card">
+                    <h4>Product Marketing</h4>
+                    <p>Boost your product's visibility with our expert marketing strategies.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Description of another impressive project.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <h4>Content Writing</h4>
+                    <p>Engaging and high-quality content tailored to your brand’s needs.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">Yet another great project.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <h4>Digital Strategy</h4>
+                    <p>Plan and execute winning digital strategies for business growth.</p>
                 </div>
             </div>
         </div>
     </div>
-
-    <footer class="mt-5">
-        <marquee><p> 2nd of February.</p></marquee>
-        <p>&copy; 2025 My Birthday Celebration. All rights reserved.</p>
-    </footer>
-
-    <script>
-        let countdown = 10;
-        let countdownElement = document.getElementById("countdown");
-        let birthdayMessage = document.getElementById("birthday-message");
-        let profilePic = document.getElementById("profile-pic");
-        let bioSection = document.getElementById("bio");
-        let header = document.querySelector("header");
-        let footer = document.querySelector("footer");
-
-        header.style.display = "none";
-        footer.style.display = "none";
-
-        let countdownInterval = setInterval(() => {
-            countdown--;
-            countdownElement.textContent = countdown;
-            if (countdown === 0) {
-                clearInterval(countdownInterval);
-                countdownElement.style.display = "none";
-                birthdayMessage.style.display = "block";
-                birthdayMessage.classList.add("fade-in");
-                setTimeout(() => {
-                    profilePic.style.display = "block";
-                    profilePic.classList.add("fade-in");
-                    setTimeout(() => {
-                        bioSection.style.display = "block";
-                        bioSection.classList.add("fade-in");
-                        header.style.display = "block";
-                        footer.style.display = "block";
-                    }, 2000);
-                }, 2000);
-            }
-        }, 1000);
-    </script>
+    
+    <div class="footer">
+        <h4>Why Choose Us?</h4>
+        <p>We provide innovative solutions to help your business grow.</p>
+    </div>
 </body>
 </html>
